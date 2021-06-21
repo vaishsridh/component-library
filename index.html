@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,6 +17,7 @@
     <h2>@Typography</h2>
     <h1>This is the biggest heading</h1>
     <h2>This is second biggest heading</h2>
+    <p>This paragraph will have <strong>bold text</strong></p>
     <p>Normal and free flowing, will wrap like a paragraph</p>
     <small>this is relaively smaller text</small>
 
@@ -23,36 +25,36 @@
     <h2>@container</h2>
 
     <h3>Fluid Container</h3>
-    <div class="container-fluid">This is a fluid container, will go till the end of the page</div>
+    <div class="container">This is a fluid container, will go till the end of the page</div>
 
     <h3>Centred Container</h3>
-    <div class="container-centre">This is a centred container, will go till specified width</div>
+    <div class="container container-center">This is a centred container, will go till specified width</div>
 
     <hr>
     <h3>@links</h3>
-    <a href="/">Primary link</a>
-    <a href="/">Secondary link</a>
+    <a class="link link-primary" href="/">Primary link</a>
+    <a class="link link-secondary" href="/">Secondary link</a>
 
     <hr>
     <h2>@lists</h3>
         <h3>unordered list</h3>
 
         <p>We don't want to show bullets. This can be fixed using CSS</p>
-        <ul>
+        <ul class="list-non-bullet">
             <li>item one</li>
             <li>item two</li>
             <li>item three</li>
         </ul>
 
         <h3>Unordered inline list</h3>
-        <ul>
-            <li>Inline item One</li>
-            <li>Inline item two</li>
-            <li>Inline item three</li>
+        <ul class="list-non-bullet">
+            <li class="list-item-inline">Inline item One</li>
+            <li class="list-item-inline">Inline item two</li>
+            <li class="list-item-inline">Inline item three</li>
         </ul>
 
         <h3>reverse ordered list</h3>
-        <ol>
+        <ol reversed>
             <li>Item One</li>
             <li>Item two</li>
             <li>Item three</li>
@@ -60,47 +62,51 @@
 
         <hr>
         <h2>@Nav</h2>
-        <nav>I am awesome
-            <ul>
-                <li>
-                    <a href="/">Home</a>
+        <nav class="navigation container">
+            <div class="nav-brand">I am awesome</div>
+            <ul class="list-non-bullet nav-pills">
+                <li class="list-item-inline">
+                    <a class="link link-active" href="/">Home</a>
                 </li>
-                <li>
-                    <a href="/">Projects</a>
+                <li class="list-item-inline">
+                    <a class="link" href="/">Projects</a>
                 </li>
-                <li>
-                    <a href="/">About</a>
+                <li class="list-item-inline">
+                    <a class="link" href="/">About</a>
                 </li>
             </ul>
         </nav>
 
         <hr>
         <h2>@Header</h2>
-        <header>
-            <img src="/images/hero.svg" />
-            <h1>Heading inside hero</h1>
+        <header class="hero">
+            <img class="hero-image" src="/images/hero.svg" />
+            <h1 class="hero-heading">Heading inside <span style="color: var(--primary-color);">hero</span></h1>
         </header>
 
         <hr>
         <h2>@Section</h2>
-        <section>
-            <h3>White Section</h3>
-            <p>This will have white background</p>
+        <section class="section">
+            <div class="container-center">
+                <h1>White Section</h1>
+                <p>This will have white background</p>
+            </div>
         </section>
-        <section>
-
-            <h3>Off white section</h3>
-            <p>This will have grey background </p>
+        <section class="section section-off-white">
+            <div class="container-center">
+                <h1>Off white section</h1>
+                <p>This will have grey background </p>
+            </div>
         </section>
 
         <hr>
         <h2>@footer</h2>
-        <footer>
-            <div>Some random text with small heading inside footer</div>
-            <ul>
-                <li>Social one</li>
-                <li>Social two</li>
-                <li>Social Three</li>
+        <footer class="footer">
+            <div class="footer-header">Some random text with small heading inside footer</div>
+            <ul class="social-links list-non-bullet">
+                <li class="list-item-inline"><a class = "link" href = "/">Social one</a></li>
+                <li class="list-item-inline"><a class = "link" href = "/">Social two</a></li>
+                <li class="list-item-inline"><a class = "link" href = "/">Social Three</a></li>
             </ul>
         </footer>
 </body>
